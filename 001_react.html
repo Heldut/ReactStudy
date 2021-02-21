@@ -12,8 +12,7 @@
                 React.createElement(
                     "h1",
                     null,
-                    "Olá Mundo! By React",
-                    " - Mais uma saída de texto"
+                    "Olá Mundo! By React"
                 ),
                 document.getElementById("root")
             );       
@@ -21,25 +20,81 @@
 
         <br><br>
         <span>
-            Para iniciarmos, dentro do
+            Para iniciarmos, dentro do das tags script, vamos inserir a biblioteca ReactDOM,<br> 
+            que fará a conexão do React com o DOM. Vamos usar o método render:<br><br>
+            <strong>ReactDOM.render()</strong>;<br><br>
+            O método "render" recebe 2 parâmetros. O primeiro é o que vamos renderizar.<br>
+            O segundo vamos informar onde queremos renderizar. Bem simples, o que e onde vamos renderizar<br>
+            as informações.<br>
+
+            Para informar o que vamos renderizar vamsos utilizar a biblioteca "createElement" do React.<br><br>
+            <strong>ReactDOM.createElement()</strong>;<br><br>
+            O método "createElement" recebe 3 parâmetros:<br>
+            No primeiro, qual a tag que vamos renderizar. O segundo é o atributo, caso exista e no terceiro<br>
+            o filho do elemento, o texto.<br><br>  
+
+            Agora vamos informar "onde" queremos renderizar. Nesse caso vamos criar uma<br>
+            tag <strong>&lt;div&gt;</strong> com o respectivo ID e informar no método getElementById<br>
+            do Javascript:<br><br>
+            <strong>document.getElementById("root)"</strong><br><br>
+
+            Assim, nosso html deve ter a seguinte aparência:<br><br>
+            <strong>
+
+&lt;html&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;001 - React Olá Mundo!&lt;&#47;title&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&#47;&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="root"&gt;&  lt;&#47;div&gt;<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script crossorigin src="https:&#47;&#47;unpkg.com&#47;react@17&#47;umd&#47;react.development.js">&lt;&#47;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script crossorigin src="https:&#47;&#47;unpkg.com&#47;react-dom@17&#47;umd&#47;react-dom.development.js">&lt;&#47;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReactDOM.render(<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    React.createElement(<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        "h1",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        null,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        "Olá Mundo! By React"<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ),<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    document.getElementById("root")<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;&#47;body&gt;<br>
+&lt;&#47;html&gt;
+            </strong>
+            <br>
+            <br>
         </span>
 
 
-
-        <br><br>
-        <span>2</span>
-
-        <br>
-        <span>3</span>
-
-        <br>
-        <span>4</span>
-
-        <br>
-        <span>5</span>
-
-        <br>
-        <span>6</span>
-
+        <br><br><br><br><br><br>
     </body>
 </html>

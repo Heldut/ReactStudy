@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>007 - Calculadora Arrow Functions - React Profissional</title>
+         <style>
+             html{
+                 box-sizing: border-box;
+             }
+
+             *, *:before, *:after{
+                 box-sizing: inherit;
+             }
+             body{
+                 margin: 0;
+                 background-color: #121212;
+                 font-family: sans-serif;
+             }
+             button{
+                 border: 0;
+                 border-radius: 4px;
+                 background-color: #efefef;
+                 padding: 8px;
+                 cursor: pointer;
+             }             
+
+             .header{
+                 background-color: #333;
+                 text-align: center;
+                 color: #fff;
+                 padding: 16px;
+                 border-radius: 4px;
+             }
+             .calculator{
+                 background-color: #fff;
+                 margin: 40px auto;
+                 max-width: 400px;
+                 padding: 16px;
+                 border-radius: 4px;                 
+             }
+             .display{
+                 width: 100%;
+                 padding: 8px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+                 font-size: 1.2em;
+             }
+             .keyboard{
+                 display: grid;
+                 grid-template-columns: repeat(3, 1fr);
+                 grid-gap: 16px;
+                 font-size: 1.2em;
+                 font-weight: bold;
+                 margin-top: 16px;
+             }
+         </style>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>        
+        <script type="text/babel">
+            const Header = () => {
+                return(
+                    <div className="header">Calculadora</div>
+                );   
+            }
+            const Calculator = () => {
+                return(
+                    <div className="calculator">
+                        <div className="display"></div>
+                        <div className="keyboard">
+                            <button>7</button>
+                            <button>8</button>
+                            <button>9</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>0</button>
+                        </div>
+                    </div>
+                );
+            }
+            function App(){
+                return(
+                    <div>
+                        <Header />                    
+                        <Calculator />
+                    </div>
+                );
+            }
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        </script>
+
+        <br>
+        <span style="color: #fff; margin-left: 100px;">
+            <br><br><br><br>
+            &nbsp;Como estamos utilizando o Babel podemos mudar algumas nomeclaturas atuais como o arrow function.<br>
+            &nbsp;Para isso vamos fazer as alterações necessárias...<br>
+            &nbsp;Anteriormente usavamos a palavra "var" para criar variáveis. Agora utilizamos "let" quando quisermos alterar a variável<br>
+            &nbsp;e "const" quando não formos alterar.<br>
+            &nbsp;Assim, vamos utilizar a "arrow function". Nossa função sera alterada como mostrado abaixo:<br><br>
+
+            &nbsp;&nbsp;
+            function Header(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                return(<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                    &lt;div className="header"&gt;Calculadora&lt;&#47;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                );<br>
+                &nbsp;&nbsp;
+            }<br><br>
+
+            &nbsp;&nbsp;
+            const Header = () => {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                return(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                &lt;div className="header"&gt;Calculadora&lt;&#47;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                );<br> 
+                &nbsp;&nbsp;  
+            }<br><br><br>
+
+            Quando vamos retornar apenas uma linha não há a necessidade de escrever o return... 
+
+            <br>
+        </span>
+
+        <br><br><br><br>        
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>007 - Calculadora Propriedades - React Profissional</title>
+         <style>
+             html{
+                 box-sizing: border-box;
+             }
+
+             *, *:before, *:after{
+                 box-sizing: inherit;
+             }
+             body{
+                 margin: 0;
+                 background-color: #121212;
+                 font-family: sans-serif;
+             }
+             button{
+                 border: 0;
+                 border-radius: 4px;
+                 background-color: #efefef;
+                 padding: 8px;
+                 cursor: pointer;
+             }             
+
+             .header{
+                 background-color: #333;
+                 text-align: center;
+                 color: #fff;
+                 padding: 16px;
+                 border-radius: 4px;
+             }
+             .calculator{
+                 background-color: #fff;
+                 margin: 40px auto;
+                 max-width: 400px;
+                 padding: 16px;
+                 border-radius: 4px;                 
+             }
+             .display{
+                 width: 100%;
+                 padding: 8px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+                 font-size: 1.2em;
+             }
+             .keyboard{
+                 display: grid;
+                 grid-template-columns: repeat(3, 1fr);
+                 grid-gap: 16px;
+                 font-size: 1.2em;
+                 font-weight: bold;
+                 margin-top: 16px;
+             }
+         </style>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>        
+        <script type="text/babel">
+
+            const Header = () => {
+                return(
+                    <div className="header">Calculadora</div>
+                );   
+            }
+        
+            const Button = (props) => (
+                <button onClick={() => { props.onClick(props.value); }}>{props.value}</button>                
+            )
+
+            const Calculator = () => {
+                const[display, setDisplay] = React.useState("");
+                const keyboard = [7,8,9,4,5,6,1,2,3,0];
+                const handleNumberClick = (value) => { setDisplay(`${display}${value}`); }
+
+                return(
+                    <div className="calculator">
+                        <div className="display">
+                            {display}
+                        </div>
+                        <div className="keyboard">
+                            {keyboard.map( valor => ( <Button key={valor} value={valor} onClick={handleNumberClick} /> ))}
+                        </div>
+                    </div>
+                );
+            }
+            
+            function App(){
+                return(
+                    <div>
+                        <Header />                    
+                        <Calculator />
+                    </div>
+                );
+            }
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        </script>
+
+        <br>
+        <span style="color: #fff; margin-left: 100px;">
+            <br><br><br><br>
+
+            <br>
+        </span>
+
+        <br><br><br><br>        
+    </body>
+</html>
